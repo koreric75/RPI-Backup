@@ -1,6 +1,6 @@
 #!/bin/bash
 # script to synchronise Pi files to backup
-BACKUP_MOUNTED=$(mount | awk '/pibackup/ {print $6}' | grep "rw")
+BACKUP_MOUNTED=$(mount | awk '/mnt/ {print $6}' | grep "rw")
 if [ $BACKUP_MOUNTED ]; then
     echo $BACKUP_MOUNTED
     echo "Commencing Backup"
